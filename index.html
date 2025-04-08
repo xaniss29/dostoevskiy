@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная | Ф. М. Достоевский</title>
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">Ф. М. Достоевский</a>
+        </div>
+        
+        <div class="menu-toggle" id="menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="biography.html">Биография</a></li>
+            <li><a href="works.html">Произведения</a></li>
+        </ul>
+    </header>
+    <div class="content-container">
+        <main>
+            <section class="site-description">
+                <h1>Фёдор Михайлович Достоевский</h1>
+                <p>Фёдор Михайлович Достоевский — русский писатель, мыслитель, философ и публицист. Член-корреспондент Петербургской академии наук с 1877 года. Классик мировой литературы, по данным ЮНЕСКО, один из самых читаемых писателей в мире.</p>
+                <p>На данном сайте вы можете узнать о биографии и о некоторых произведениях величайшего писателя XIX века.</p>
+                <div class="quote">
+                    Сострадание есть главнейший и, может быть, единственный закон бытия всего человечества.
+                </div>
+            </section>
+        </main>
+        <div class="slider-container">
+            <div class="slider" id="slider">
+                <div class="slide">
+                    <img src="images/Portrait.jpg" alt="Портрет Достоевского">
+                    <div class="slide-caption">Ф.М. Достоевский - величайший русский писатель и мыслитель</div>
+                </div>
+                <div class="slide">
+                    <img src="images/Museum.jpg" alt="Музей Достоевского">
+                    <div class="slide-caption">Музей-квартира Достоевского в Санкт-Петербурге</div>
+                </div>
+                <div class="slide">
+                    <img src="images/Notes.jpeg" alt="Рукописи Достоевского">
+                    <div class="slide-caption">Рукописи и первые издания произведений</div>
+                </div>
+            </div>
+            <div class="slider-nav">
+                <button id="prevBtn">❮</button>
+                <button id="nextBtn">❯</button>
+            </div>
+            <div class="slider-dots" id="sliderDots"></div>
+        </div>
+    </div>
+    <footer>
+        <div class="copyright">
+            © 2025 Сайт про Ф.М. Достоевского.
+        </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
