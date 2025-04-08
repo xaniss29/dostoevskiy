@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', serif;
+}
+
+body {
+    background-color: #faf9f7;
+    color: #5a5a5a;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* HEADER STYLES (как на главной) */
+.header {
+    background-color: #f0e6d2;
+    color: #6d5c4d;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo a {
+    color: #8b7355;
+    text-decoration: none;
+    font-style: italic;
+}
+
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background: #8b7355;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background-color: #f8f1e5;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5rem 2rem;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+    z-index: 1000;
+    list-style: none;
+}
+
+.nav-menu.active {
+    right: 0;
+}
+
+.nav-menu li {
+    margin: 1.2rem 0;
+    width: 100%;
+}
+
+.nav-menu a {
+    color: #6d5c4d;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 4px;
+}
+
+.nav-menu a:hover {
+    color: #c7a97a;
+    background-color: rgba(199, 169, 122, 0.1);
+}
+
+/* Анимация бургера в крестик */
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* MAIN CONTENT STYLES */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+    flex: 1;
+}
+
+.bio-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.bio-header h1 {
+    color: #8b7355;
+    font-size: 2.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.bio-header .subtitle {
+    color: #6d5c4d;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+.bio-section {
+    margin-bottom: 3rem;
+    background-color: #f8f4ee;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #c7a97a;
+}
+
+.bio-section h2 {
+    color: #8b7355;
+    margin-bottom: 1.2rem;
+    font-size: 1.6rem;
+    border-bottom: 1px dashed #e0d5c0;
+    padding-bottom: 0.5rem;
+}
+
+.bio-section p {
+    margin-bottom: 1.2rem;
+    color: #6d5c4d;
+}
+
+.bio-timeline {
+    position: relative;
+    padding-left: 2rem;
+    margin: 2rem 0;
+}
+
+.bio-timeline::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #c7a97a;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2rem;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #8b7355;
+    border: 2px solid #c7a97a;
+}
+
+.timeline-year {
+    font-weight: bold;
+    color: #8b7355;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.bio-quote {
+    font-style: italic;
+    padding: 1.5rem;
+    background-color: #f0e6d2;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    position: relative;
+}
+
+.bio-quote::before {
+    content: '"';
+    font-size: 3rem;
+    color: #c7a97a;
+    position: absolute;
+    left: 10px;
+    top: -10px;
+    line-height: 1;
+}
+
+.bio-image {
+    float: right;
+    margin: 0 0 1.5rem 1.5rem;
+    width: 250px;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0d5c0;
+}
+
+/* FOOTER STYLES */
+footer {
+    background-color: #f0e6d2;
+    color: #6d5c4d;
+    padding: 1.5rem;
+    text-align: center;
+    margin-top: 3rem;
+    border-top: 1px solid #e0d5c0;
+}
+
+/* АДАПТИВНОСТЬ */
+@media (max-width: 768px) {
+    .bio-image {
+        float: none;
+        width: 100%;
+        margin: 0 0 1.5rem 0;
+    }
+    
+    .bio-section {
+        padding: 1.5rem;
+    }
+    
+    .bio-header h1 {
+        font-size: 1.8rem;
+    }
+}
